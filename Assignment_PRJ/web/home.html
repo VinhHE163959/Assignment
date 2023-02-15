@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lí chi tiêu cá nhân</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h2>Quản lí chi tiêu cá nhân</h2>
+  <form>
+    <label for="item">Mục chi tiêu:</label>
+    <input type="text" id="item" name="item">
+    <label for="amount">Số tiền:</label>
+    <input type="number" id="amount" name="amount">
+    <input type="submit" value="Thêm">
+  </form>
+  <table id="expense-table">
+    <tr>
+      <th>Mục chi tiêu</th>
+      <th>Số tiền</th>
+    </tr>
+  </table>
+  <script>
+    const form = document.querySelector("form");
+    const table = document.querySelector("#expense-table");
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const itemInput = document.querySelector("#item");
+      const amountInput = document.querySelector("#amount");
+      const item = itemInput.value;
+      const amount = amountInput.value;
+      const row = `
+        <tr>
+          <td>${item}</td>
+          <td>${amount}</td>
+        </tr>
+      `;
+      table.innerHTML += row;
+      itemInput.value = "";
+      amountInput.value = "";
+    });
+  </script>
+</body>
+</html>
+

@@ -5,11 +5,56 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    <title>Login Page</title>
+    <style>
+      body {
+        background-image: url('background-image.jpg');
+        background-size: cover;
+      }
+
+      .login-container {
+        width: 500px;
+        height: 400px;
+        margin: 100px auto;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #333;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #333;
+        color: white;
+        border: 0;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+      <h1 style="background-color:rgb(255, 99, 71);">)</h1>
+    <div class="login-container">
+      <form action="login" method="post">
+        <input type="text" name="username" placeholder="Username" class="form-control">
+        <input type="password" name="password" placeholder="Password" class="form-control">
+        <input type="text" name="phone" placeholder="Phone Number" class="form-control">
+        <input type="text" name="bank_account" placeholder="Bank Account Number" class="form-control">
+        <input type="submit" value="Login" class="btn-submit">
+      </form>
+    </div>
+  </body>
 </html>
