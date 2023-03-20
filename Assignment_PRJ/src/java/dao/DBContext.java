@@ -24,9 +24,9 @@ public class DBContext {
     public DBContext() {
         try {
 
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=Wallet_Management";
+            String url = "jdbc:sqlserver://DESKTOP-80SRQQ2:1433;databaseName=Wallet_Management";
             String user = "sa";
-            String pass = "12345678";
+            String pass = "123";
 
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
